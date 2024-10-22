@@ -14,6 +14,7 @@ import LeftBar from "./components/ui/LeftBar";
 import Upcoming from "./components/ui/Upcoming";
 import Live from "./components/ui/Live";
 import Previous from "./components/ui/Previous";
+import MyProfile from "./components/ui/MyProfile";
 
 const App = () => {
   return (
@@ -33,10 +34,11 @@ const App = () => {
 
         {/* rightBar */}
         <LeftBar />
+        <MyProfile />
         {/* <Rightbar /> */}
         {/* <Upcoming /> */}
         {/* <Live /> */}
-        <Previous />
+        {/* <Previous /> */}
       </div>
     </>
   );
