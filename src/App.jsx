@@ -15,6 +15,9 @@ import Upcoming from "./components/ui/Upcoming";
 import Live from "./components/ui/Live";
 import Previous from "./components/ui/Previous";
 import MyProfile from "./components/ui/MyProfile";
+import Videos from "./components/ui/Videos";
+import Webinargg from "./components/ui/Webinargg";
+import MicCamera from "./components/ui/MicCamera";
 
 const App = () => {
   return (
@@ -33,12 +36,15 @@ const App = () => {
         </SidebarMenu> */}
 
         {/* rightBar */}
-        <LeftBar />
-        <MyProfile />
+        {/* <LeftBar /> */}
+        {/* <MyProfile /> */}
         {/* <Rightbar /> */}
         {/* <Upcoming /> */}
         {/* <Live /> */}
         {/* <Previous /> */}
+        {/* <Videos /> */}
+        {/* <Webinargg /> */}
+        <MicCamera />
       </div>
     </>
   );
