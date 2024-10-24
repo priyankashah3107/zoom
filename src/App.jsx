@@ -42,9 +42,9 @@ const App = () => {
         {/* <Upcoming /> */}
         {/* <Live /> */}
         {/* <Previous /> */}
-        {/* <Videos /> */}
+        <Videos />
         {/* <Webinargg /> */}
-        <MicCamera />
+        {/* <MicCamera /> */}
       </div>
     </>
   );

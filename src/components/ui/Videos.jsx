@@ -9,14 +9,13 @@ import V7 from "../../assets/videos/v7.mp4";
 import V8 from "../../assets/videos/v8.mp4";
 import V9 from "../../assets/videos/v9.mp4";
 import LogoSection from "./LogoSection";
+import VideoNavbar from "./VideoNavbar";
+import Share from "../../assets/share.svg";
+import Pin from "../../assets/pin.svg";
+import VideoFooter from "./VideoFooter";
 
 const profiles = [
-  {
-    id: 1,
-    initials: "PK",
-    videoUrl: V1,
-    featured: true,
-  },
+  { id: 1, initials: "PK", videoUrl: V1, featured: true },
   { id: 2, initials: "JD", videoUrl: V2 },
   { id: 3, initials: "AK", videoUrl: V3 },
   { id: 4, initials: "MS", videoUrl: V4 },
@@ -27,11 +26,19 @@ const profiles = [
   { id: 9, initials: "MK", videoUrl: V9 },
 ];
 
+const getRandomProfiles = (arr, count) => {
+  const shuffled = arr.sort(() => Math.random() - 0.5);
+  return shuffled.slice(0, count);
+};
+
 const ProfileGrid = () => {
+  const randomProfiles = getRandomProfiles(profiles.slice(1), 6);
+
   return (
-    <div className="min-h-screen bg-gray-50 p-4 w-full">
-      <LogoSection />
-      <div className="max-w-6xl mx-auto">
+    <div className="min-h-screen bg-[#002b5b]  w-full">
+      {/* <LogoSection /> */}
+      <VideoNavbar />
+      <div className="max-w-7xl mx-auto">
         <div className="">
           <div className="flex flex-col lg:flex-row gap-6">
             <div className="lg:w-2/3">
@@ -43,14 +50,31 @@ const ProfileGrid = () => {
                   controls
                 />
                 <div className="absolute bottom-4 left-4 bg-white/90 px-3 py-1 rounded-lg text-sm font-medium">
-                  Prabhleen Kaur
+                  Prabhleen Kaur (You)
+                </div>
+
+                <div className="absolute top-2 right-5 flex flex-row gap-2">
+                  <button className="w-[38px] h-[38px] p-[9px] bg-black/20 rounded-md justify-start items-center gap-[7px]  ">
+                    <img
+                      src={Share}
+                      alt="Share"
+                      className="w-[19px] h-[19px]"
+                    />
+                  </button>
+                  <button className="w-[38px] h-[38px] p-[9px] bg-black/20 rounded-md justify-start items-center gap-[7px] ">
+                    <img
+                      src={Pin}
+                      alt="PinProfile"
+                      className="w-[19px] h-[19px]"
+                    />
+                  </button>
                 </div>
               </div>
             </div>
 
             <div className="lg:w-1/3">
               <div className="grid grid-cols-2 gap-2">
-                {profiles.slice(1).map((profile) => (
+                {randomProfiles.map((profile) => (
                   <div
                     key={profile.id}
                     className="relative aspect-square rounded-lg overflow-hidden group cursor-pointer"
@@ -74,6 +98,8 @@ const ProfileGrid = () => {
           </div>
         </div>
       </div>
+
+      <VideoFooter />
     </div>
   );
 };

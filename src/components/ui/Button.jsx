@@ -1,6 +1,8 @@
 import { User } from "lucide-react";
 import React from "react";
 import Home from "../../assets/hom.png";
+import { Lock } from "lucide-react";
+import P from "./P";
 
 const Button = () => {
   return (
@@ -28,6 +30,50 @@ export const WebinarButton = ({ icon, text }) => {
         <p className="text-[#1c1b1f] text-sm font-semibold font-['General Sans'] leading-tight">
           {text}
         </p>
+      </button>
+    </>
+  );
+};
+
+export const VideoWebinarButton = ({ lock, text }) => {
+  return (
+    <>
+      <button className="flex flex-row h-[38px] px-4 py-2 rounded-lg border border-white/10 justify-center items-center gap-2.5">
+        <img className="w-5 h-5 " src={lock} />
+        <p>{text}</p>
+      </button>
+    </>
+  );
+};
+
+export const ParticipantsButton = ({ icon, num }) => {
+  return (
+    <>
+      <button className="flex flex-row h-[38px] px-4 py-2 rounded-lg border border-white/10 justify-center items-center gap-2.5">
+        <img className="w-5 h-5" src={icon} alt="userPartipants" />
+        <p>{num}</p>
+      </button>
+    </>
+  );
+};
+
+export const RecordingButton = ({ rec, text, time }) => {
+  return (
+    <>
+      <button className="flex flex-row h-[38px] px-4 py-2 rounded-lg border border-white/10 justify-center items-center gap-2.5">
+        <img className="w-5 h-5" src={rec} alt="RecordingButton" />
+        <p>{text}</p>
+        <p>{time}</p>
+      </button>
+    </>
+  );
+};
+
+export const WebinarVideoLeftIcons = ({ icon }) => {
+  return (
+    <>
+      <button className="w-[38px] h-[38px] p-[9px] bg-white/10 rounded-md justify-start items-center gap-[7px]">
+        <img className="w-[19px] h-[19px]" src={icon} alt="icons" />
       </button>
     </>
   );
