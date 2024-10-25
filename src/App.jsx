@@ -18,6 +18,7 @@ import MyProfile from "./components/ui/MyProfile";
 import Videos from "./components/ui/Videos";
 import Webinargg from "./components/ui/Webinargg";
 import MicCamera from "./components/ui/MicCamera";
+import Chat from "./components/ui/Chat";
 
 const App = () => {
   return (
@@ -45,6 +46,7 @@ const App = () => {
         <Videos />
         {/* <Webinargg /> */}
         {/* <MicCamera /> */}
+        {/* <Chat /> */}
       </div>
     </>
   );
