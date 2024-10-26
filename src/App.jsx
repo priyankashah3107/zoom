@@ -19,6 +19,8 @@ import Videos from "./components/ui/Videos";
 import Webinargg from "./components/ui/Webinargg";
 import MicCamera from "./components/ui/MicCamera";
 import Chat from "./components/ui/Chat";
+import LeaveWebinar from "./components/ui/LeaveWebinar";
+import { useState } from "react";
 
 const App = () => {
   return (
@@ -37,8 +39,8 @@ const App = () => {
         </SidebarMenu> */}
 
         {/* rightBar */}
-        {/* <LeftBar /> */}
-        {/* <MyProfile /> */}
+        {/* <LeftBar />
+        <MyProfile /> */}
         {/* <Rightbar /> */}
         {/* <Upcoming /> */}
         {/* <Live /> */}
@@ -47,6 +49,7 @@ const App = () => {
         {/* <Webinargg /> */}
         {/* <MicCamera /> */}
         {/* <Chat /> */}
+        {/* <LeaveWebinar /> */}
       </div>
     </>
   );

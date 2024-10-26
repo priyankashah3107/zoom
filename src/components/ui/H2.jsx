@@ -11,6 +11,3 @@ const H2 = ({ children }) => {
 };
 
 export default H2;
-
-
-
