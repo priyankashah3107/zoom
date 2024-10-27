@@ -17,7 +17,7 @@ body {
 .myacc {
   color: rgba(28, 27, 31, 0.6);
   font-family: "General Sans";
-  font-size: 16px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -26,11 +26,11 @@ body {
 .myacctext {
   color: #1c1b1f;
   font-family: "General Sans";
-  font-size: 16px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  margin-left: 100px;
+  /* margin-left: 100px; */
 }
 
 /* h1 {

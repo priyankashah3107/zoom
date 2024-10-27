@@ -44,8 +44,8 @@ const App = () => {
         </SidebarMenu> */}
 
         {/* rightBar */}
-        {/* <LeftBar />
-        <MyProfile /> */}
+        <LeftBar />
+        <MyProfile />
         {/* <Rightbar /> */}
         {/* <Upcoming /> */}
         {/* <Live /> */}
@@ -59,7 +59,7 @@ const App = () => {
         {/* <VerifyEmail /> */}
         {/* <EmailCodeVerify /> */}
         {/* <SigninPage /> */}
-        <LoginPage />
+        {/* <LoginPage /> */}
       </div>
     </>
   );

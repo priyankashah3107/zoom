@@ -28,7 +28,7 @@ export default Button;
 export const WebinarButton = ({ icon, text }) => {
   return (
     <>
-      <button className="flex-col justify-start items-center gap-2.5 inline-flex">
+      <button className="flex-col justify-start items-center gap-2.5 inline-flex ">
         <img src={icon} alt="PlusIcon" />
         <p className="text-[#1c1b1f] text-sm font-semibold font-['General Sans'] leading-tight">
           {text}
