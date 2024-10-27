@@ -21,6 +21,11 @@ import MicCamera from "./components/ui/MicCamera";
 import Chat from "./components/ui/Chat";
 import LeaveWebinar from "./components/ui/LeaveWebinar";
 import { useState } from "react";
+import VerifyAge from "./components/ui/VerifyAge";
+import VerifyEmail from "./components/ui/VerifyEmail";
+import EmailCodeVerify from "./components/ui/EmailCodeVerfiy";
+import SigninPage from "./components/ui/signlogin/SigninPage";
+import LoginPage from "./components/ui/signlogin/LoginPage";
 
 const App = () => {
   return (
@@ -45,11 +50,16 @@ const App = () => {
         {/* <Upcoming /> */}
         {/* <Live /> */}
         {/* <Previous /> */}
-        <Videos />
+        {/* <Videos /> */}
         {/* <Webinargg /> */}
         {/* <MicCamera /> */}
         {/* <Chat /> */}
         {/* <LeaveWebinar /> */}
+        {/* <VerifyAge /> */}
+        {/* <VerifyEmail /> */}
+        {/* <EmailCodeVerify /> */}
+        {/* <SigninPage /> */}
+        <LoginPage />
       </div>
     </>
   );

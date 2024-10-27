@@ -30,7 +30,7 @@ const LeaveWebinarPage = () => {
             <button className="flex flex-row items-center h-[42px] px-5 py-2.5 bg-white/80 rounded-lg gap-3">
               <Ticket className="text-[#002752]" />
               <span className="text-[#002752] text-base font-medium">
-                Go to Dashboard?
+                View Recording
               </span>
             </button>
           </div>
