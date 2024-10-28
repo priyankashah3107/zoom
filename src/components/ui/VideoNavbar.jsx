@@ -20,7 +20,7 @@ import User from "../../assets/User.png";
 const VideoNavbar = () => {
   return (
     <>
-      <div className="w-full h-[80px] items-center flex flex-row justify-between p-[29px] text-white text-sm font-medium font-['General Sans'] mb-8">
+      <div className="w-full h-[80px] items-center flex flex-row justify-between p-[29px] text-white text-sm font-medium font-['General Sans'] mb-8 ">
         <div className="flex flex-row items-center gap-5">
           <Button />
           <VideoWebinarButton lock={Lock} text={"webinar.gg/MyWebinar"} />
@@ -31,7 +31,7 @@ const VideoNavbar = () => {
             time={"( 01:34 )"}
           />
         </div>
-        <div className="flex flex-row gap-4">
+        <div className="flex flex-row gap-4 ">
           <WebinarVideoLeftIconsSetting icon={Setting} />
           <WebinarVideoLeftIconsMore icon={MoreVert} />
           <WebinarVideoLeftIconsProfile icon={User} />

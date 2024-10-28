@@ -3,8 +3,6 @@ import EmojiPicker from "emoji-picker-react";
 import { Smile } from "lucide-react";
 import User from "../../assets/image1.png";
 
-
-
 const Chat = ({ onClose }) => {
   const [message, setMessage] = useState("");
   const [showEmojiPicker, setShowEmojiPicker] = useState(false);

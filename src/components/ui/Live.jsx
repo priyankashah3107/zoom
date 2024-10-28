@@ -19,30 +19,31 @@ const live = true;
 
 const Live = () => {
   return (
-    <div className="w-full  mx-auto">
+    <div className="w-full  mx-auto overflow-x-hidden p-2 lg:p-0">
       <table className="w-full text-left border-collapse">
         <thead>
-          <tr className="border-b">
+          <tr className="border-b text-sm lg:text-lg">
             <th className="py-2">Time</th>
             <th className="py-2">Webinar</th>
             <th className="py-2">Webinar ID</th>
             <th className="py-2"></th>
           </tr>
         </thead>
-        <tbody>
+        <tbody className="text-[14px] lg:text-[18px]">
           {webinars.map((webinar, index) => (
             <tr key={index} className="border-b">
               <td className="py-3">{webinar.time}</td>
-              <td className="py-3 flex items-center flex-row gap-2">
+
+              <td className="py-3 flex items-center flex-row gap-2 ">
                 {webinar.title}
                 {live && index === 0 && <img src={Redvc} alt="img" />}
               </td>
               <td className="py-3">{webinar.webinarId}</td>
               <td className="py-3 flex gap-2">
-                <button className="text-blue-600 border border-blue-600 px-3 py-1 rounded hover:bg-blue-600 hover:text-white">
+                <button className="text-blue-600 border border-blue-600 px-2 lg:px-3 py-1 rounded hover:bg-blue-600 hover:text-white">
                   Join
                 </button>
-                <button className="text-red-600 border border-red-600 px-3 py-1 rounded hover:bg-red-600 hover:text-white">
+                <button className="text-red-600 border border-red-600 px-2 lg:px-3 py-1 rounded hover:bg-red-600 hover:text-white">
                   Delete
                 </button>
               </td>

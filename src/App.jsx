@@ -45,12 +45,12 @@ const App = () => {
 
         {/* rightBar */}
         <LeftBar />
-        <MyProfile />
+        {/* <MyProfile /> */}
         {/* <Rightbar /> */}
         {/* <Upcoming /> */}
         {/* <Live /> */}
         {/* <Previous /> */}
-        {/* <Videos /> */}
+        <Videos />
         {/* <Webinargg /> */}
         {/* <MicCamera /> */}
         {/* <Chat /> */}

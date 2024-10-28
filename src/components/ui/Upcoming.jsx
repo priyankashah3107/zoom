@@ -56,11 +56,11 @@ const webinarsByDay = webinars.reduce((acc, webinar) => {
 
 const Upcoming = () => {
   return (
-    <div className="flex flex-col w-full">
+    <div className="flex flex-col w-full overflow-x-hidden">
       <table className="border-collapse border border-gray-200 w-full">
         <thead className="text-[#1c1b1f]/60 text-base font-semibold font-['General Sans'] leading-snug">
-          <tr>
-            <th className="border border-gray-200 p-2">Time</th>
+          <tr className="text-sm lg:text-lg">
+            <th className="border border-gray-200 p-2 ">Time</th>
             <th className="border border-gray-200 p-2">Webinar</th>
             <th className="border border-gray-200 p-2">Webinar ID</th>
           </tr>
@@ -75,7 +75,7 @@ const Upcoming = () => {
                 <tr>
                   <th
                     colSpan="5"
-                    className="border border-gray-200 bg-gray-100 p-2 text-left"
+                    className="border border-gray-200 bg-gray-100 p-2 text-center lg:text-start"
                   >
                     {dayName} - {dayInfo.day}
                     {/* {dayName} */}
@@ -83,17 +83,17 @@ const Upcoming = () => {
                 </tr>
                 {dayInfo.webinars.map((webinar, webinarIndex) => (
                   <tr key={webinarIndex} className="border-b">
-                    <td className="border border-gray-200 p-2">
+                    <td className="border border-gray-200 p-2 text-[14px] lg:text-[18px]">
                       {webinar.time}
                     </td>
-                    <td className="border border-gray-200 p-2">
+                    <td className="border border-gray-200 p-2 text-[14px] lg:text-[18px]">
                       {webinar.title}
                     </td>
-                    <td className="border border-gray-200 p-2">
+                    <td className="border border-gray-200 p-2 text-[14px] lg:text-[18px]">
                       {webinar.webinarId}
                     </td>
                     <td className="border border-gray-200 p-2 flex gap-2">
-                      <button className="text-red-600 border border-red-600 px-3 py-1 rounded hover:bg-red-600 hover:text-white">
+                      <button className="text-red-600 border border-red-600 px-2 lg:px-3 lg:py-1 rounded hover:bg-red-600 hover:text-white">
                         Delete
                       </button>
                     </td>

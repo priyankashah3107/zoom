@@ -233,7 +233,7 @@ const VideoFooter = () => {
     <div className="relative">
       {/* Chat Component */}
       {isChatOpen && (
-        <div className="absolute bottom-44 right-5 w-auto h-[600px] rounded-lg overflow-hidden shadow-lg">
+        <div className="absolute bottom-44 p-2  lg:p-0 md:right-4 lg:right-5 w-auto h-[600px] rounded-lg overflow-hidden shadow-lg ">
           <Chat onClose={() => setIsChatOpen(false)} />
         </div>
       )}
@@ -265,7 +265,7 @@ const VideoFooter = () => {
                 className="w-[18px] h-[18px]"
               /> */}
             </button>
-            <button className="w-[38px] h-[38px] p-[9px] bg-[#f4f4f4] rounded-[19px] justify-start items-center gap-[16px]">
+            <button className="hidden lg:flex w-[38px] h-[38px] p-[9px] bg-[#f4f4f4] rounded-[19px] justify-start items-center gap-[16px]">
               <img
                 src={Brightness_alret}
                 alt="Brightness"
@@ -358,20 +358,20 @@ const LeaveWebinar = () => {
   const handleLeaveWebinar = () => setIsLeaving(true);
   return (
     <>
-      <div className=" absolute lg:bottom-52 lg:left-[40%] w-[413px] h-[250px] p-6 rounded-xl border-2 border-black/10 backdrop-blur-[100px] bg-opacity-80 bg-white/10  flex-col justify-start items-start gap-[60px] inline-flex">
+      <div className=" absolute bottom-60 right-0.5 md:right-44 lg:bottom-52 lg:left-[40%] w-auto  lg:w-[413px] h-[250px] p-6 rounded-xl border-2 border-black/10 backdrop-blur-[100px] bg-opacity-80 bg-white  flex-col justify-start items-start gap-[60px] inline-flex">
         <div className="flex flex-col self-stretch h-[92px] justify-start items-center gap-4">
-          <h2 className="text-center text-[#002b5b] text-2xl font-semibold font-['General Sans']">
+          <h2 className="text-center text-[#002b5b] text-[20px] lg:text-2xl font-semibold font-['General Sans']">
             Leave “My Webinar”
           </h2>
-          <p className="text-center text-[#002b5b]/60 text-base font-medium font-['General Sans']">
+          <p className="text-center text-[#002b5b]/60  text-[14px] lg:text-base font-medium font-['General Sans']">
             Leaving the webinar will remove you from the room. Are you sure?
           </p>
 
           <div className=" flex  flex-row justify-between items-center gap-[18px] ">
-            <button className="h-[50px] px-4 py-2.5 bg-[#40e0d0] rounded-lg justify-center items-center gap-2 inline-flex text-[#002752] text-base font-semibold font-['General Sans'] leading-snug">
+            <button className="h-[50px] p-3 lg:px-4 lg:py-2.5 bg-[#40e0d0] rounded-lg justify-center items-center gap-2 inline-flex text-[#002752] text-base font-semibold font-['General Sans'] leading-snug">
               Leave Webinar
             </button>
-            <button className="h-[50px] px-4 py-2.5 bg-white/30 rounded-lg border justify-center items-center gap-2 inline-flex text-[#002752] text-base font-semibold font-['General Sans'] leading-snug">
+            <button className="h-[50px] p-3 lg:px-4 lg:py-2.5 bg-white/30 rounded-lg border justify-center items-center gap-2 inline-flex text-[#002752] text-base font-semibold font-['General Sans'] leading-snug">
               Cancel
             </button>
           </div>
@@ -400,7 +400,7 @@ const QuestionBot = () => {
   };
   return (
     <>
-      <div className="absolute w-auto lg:w-[407px] bottom-56 flex flex-col  h-auto p-6 rounded-xl shadow border-2 border-black/10 backdrop-blur-[100px]  justify-center items-center gap-8 bg-white  ">
+      <div className="absolute w-[355px] lg:w-[407px] bottom-56 right-9 flex flex-col  h-auto p-6 rounded-xl shadow border-2 border-black/10 backdrop-blur-[100px]  justify-center items-center gap-8 bg-white  ">
         <div className="flex flex-col">
           <div className="mb-5">
             <H2>{title}</H2>
@@ -410,10 +410,10 @@ const QuestionBot = () => {
           <div>
             <div className="flex flex-col gap-3">
               <P>{currentDay}</P>
-              <p className="h-auto w-auto px-3 py-2 bg-[#002b5b] rounded-[10px] flex-col justify-center items-center gap-2 mt-5">
+              <p className="h-auto w-auto px-2.5 py-1.5 lg:px-3 lg:py-2 bg-[#002b5b] rounded-md lg:rounded-[10px] flex-col justify-center items-center gap-2 mt-5 text-[14px]">
                 Hey there! My name is Webinar.gg help, your chat assistant.
               </p>
-              <p className="h-auto w-auto px-3 py-2 bg-[#002b5b] rounded-[10px] flex-col justify-center items-center gap-2">
+              <p className="h-auto w-auto px-2.5 py-1.5 lg:px-3 lg:py-2  bg-[#002b5b] rounded-[10px] flex-col justify-center items-center gap-2">
                 I can help you with common questions about how to use
                 webinar.gg, feature available, and get in touch with our support
                 team.
@@ -422,16 +422,16 @@ const QuestionBot = () => {
                 <img
                   src={Home}
                   alt="Home"
-                  className="w-10 h-10 px-[8px] py-[4px] bg-[#002b5b] rounded-md justify-center items-center gap-[11px]"
+                  className="size-8 lg:w-10 lg:h-10 px-[8px] py-[4px] bg-[#002b5b] rounded-md justify-center items-center gap-[11px]"
                 />
-                <p className="h-auto w-auto px-3 py-2 bg-[#002b5b] rounded-[10px] flex-col justify-center items-center gap-2">
+                <p className="h-auto w-auto px-2.5 py-1.5 lg:px-3 lg:py-2  bg-[#002b5b] rounded-[10px] flex-col justify-center items-center gap-2">
                   How can I help you today ?
                 </p>
               </div>
             </div>
           </div>
 
-          <div className=" flex flex-row  p-3 rounded-md border border-black/10 justify-between items-center mt-4">
+          <div className=" flex flex-row p-2 lg:p-3 rounded-md border border-black/10 justify-between items-center mt-4">
             <input
               onChange={handleInputChange}
               value={message}
