@@ -8,6 +8,7 @@ import Switch from "../../assets/switch.png";
 import groups from "../../assets/groups.png";
 import LogoSection from "./LogoSection";
 import { Menu, X } from "lucide-react";
+import { Link, NavLink } from "react-router-dom";
 // const LeftBar = () => {
 //   return (
 //     <>
@@ -57,11 +58,28 @@ const LeftBar = () => {
         <div className="flex flex-col h-full p-2">
           <LogoSection />
           <SidebarMenu>
-            <SidebarMenuItem title="Home" icon={HomeIcon} />
-            <SidebarMenuItem title="Webinars" icon={groups} />
-            <SidebarMenuItem title="Planning & Billing" icon={Billing} />
-            <SidebarMenuItem title="User Management" icon={Switch} />
-            <SidebarMenuItem title="Settings" icon={Setting} />
+            <SidebarMenuItem title="Home" icon={HomeIcon} route={"/home"} />
+
+            <SidebarMenuItem
+              title="Webinars"
+              icon={groups}
+              route={"/webinars"}
+            />
+            <SidebarMenuItem
+              title="Planning & Billing"
+              icon={Billing}
+              route={"/billing"}
+            />
+            <SidebarMenuItem
+              title="User Management"
+              icon={Switch}
+              route={"/usermanagement"}
+            />
+            <SidebarMenuItem
+              title="Settings"
+              icon={Setting}
+              route={"/settings"}
+            />
           </SidebarMenu>
         </div>
       </div>

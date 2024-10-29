@@ -7,6 +7,8 @@ import { ChevronDown } from "lucide-react";
 import { useState } from "react";
 import h2 from "./h2";
 
+import { NavLink } from "react-router-dom";
+
 const Button = () => {
   return (
     // <div className="w-[80px]  lg:w-[130px] lg:h-[44px] -ml-4 md:-ml-0  lg:px-[12px] lg:py-[8px] bg-[#002b5b]  rounded-md lg:rounded-lg justify-start items-center gap-[4px] lg:gap-[6px] inline-flex">
@@ -24,7 +26,7 @@ const Button = () => {
     //     </p>
     //   </div>
     // </div>
-    <div className="w-[130px] h-[44px]   px-[12px] py-[8px] bg-[#002b5b]  rounded-lg justify-start items-center lg:gap-[6px] inline-flex">
+    <div className="w-[130px] h-[44px]   px-[12px] py-[8px] bg-[#002b5b]  rounded-lg justify-start items-center lg:gap-[6px] inline-flex cursor-pointer">
       <div className="flex flex-row  items-center gap-2">
         <img src={Home} alt="Home" className=" w-[20px] h-[20px]" />
         <p className="text-white text-sm font-Medium  leading-[16.95px]">

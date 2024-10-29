@@ -1,5 +1,7 @@
 import React from "react";
 import { format, parse } from "date-fns";
+import { useEffect } from "react";
+import Webinars from "./Webinars";
 
 const webinars = [
   {
@@ -57,6 +59,7 @@ const webinarsByDay = webinars.reduce((acc, webinar) => {
 const Upcoming = () => {
   return (
     <div className="flex flex-col w-full overflow-x-hidden">
+      <Webinars />
       <table className="border-collapse border border-gray-200 w-full">
         <thead className="text-[#1c1b1f]/60 text-base font-semibold font-['General Sans'] leading-snug">
           <tr className="text-sm lg:text-lg">

@@ -7,6 +7,20 @@ const Chat = ({ onClose }) => {
   const [message, setMessage] = useState("");
   const [showEmojiPicker, setShowEmojiPicker] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
+  const [chatMessages, setChatMessages] = useState([]);
+
+  //This is just for demo of how socketio will handle the message
+  const onMessageReceive = (message, user, timeStamp, profilePicUrl) => {
+    setChatMessages((prev) => [
+      ...prev,
+      {
+        message,
+        user,
+        timeStamp,
+        profilePicUrl,
+      },
+    ]);
+  };
 
   const onEmojiClick = (emojiObject) => {
     setMessage((prevMessage) => prevMessage + emojiObject.emoji);
@@ -64,6 +78,16 @@ const Chat = ({ onClose }) => {
         </div>
       </div>
 
+      {/*  TODO: */}
+      {/* Make the input element add the messages to the chat state  */}
+      {/* On the basis of state render the messages */}
+      {/* Make a seperate component for each message */}
+      {/* If message is sent by you it should be in the right else it should on the left */}
+
+      {/* chatMessages.map(msg => {
+        return <IndividualMessage />
+      }) */}
+
       {/* Rest of your existing chat component code */}
       <div className="flex-1 p-4 space-y-6 overflow-y-auto">
         <div className="text-center">
@@ -71,14 +95,14 @@ const Chat = ({ onClose }) => {
         </div>
 
         <div className="space-y-1">
+          <div className="flex justify-end">
+            <span className="text-sm text-gray-500">Prabhleen Kaur (You)</span>
+          </div>
           <div className="flex justify-end space-x-2">
             <div className="bg-pink-100 rounded-lg px-4 py-2 max-w-[200px]">
               <p>Hey!👋</p>
             </div>
             <img src={User} alt="avatar" className="w-8 h-8 rounded-full" />
-          </div>
-          <div className="flex justify-end">
-            <span className="text-sm text-gray-500">Prabhleen Kaur (You)</span>
           </div>
         </div>
 
@@ -86,14 +110,14 @@ const Chat = ({ onClose }) => {
           <div className="text-center">
             <span className="text-xs text-gray-400">04:32</span>
           </div>
+          <div className="ml-10">
+            <span className="text-sm text-gray-500">User1</span>
+          </div>
           <div className="flex space-x-2">
             <img src={User} alt="avatar" className="w-8 h-8 rounded-full" />
             <div className="bg-gray-100 rounded-lg px-4 py-2 max-w-[200px]">
               <p>Hey!👋</p>
             </div>
-          </div>
-          <div className="ml-10">
-            <span className="text-sm text-gray-500">User1</span>
           </div>
         </div>
 
@@ -105,23 +129,20 @@ const Chat = ({ onClose }) => {
               <p>When will the webinar start?</p>
             </div>
           </div>
-          <div className="ml-10">
-            <span className="text-sm text-gray-500">User1</span>
-          </div>
         </div>
 
         <div className="space-y-1">
           <div className="text-center">
             <span className="text-xs text-gray-400">04:50</span>
           </div>
+          <div className="ml-10">
+            <span className="text-sm text-gray-500">User1</span>
+          </div>
           <div className="flex space-x-2">
             <img src={User} alt="avatar" className="w-8 h-8 rounded-full" />
             <div className="bg-gray-100 rounded-lg px-4 py-2 max-w-[200px]">
               <p>In 10 minutes</p>
             </div>
-          </div>
-          <div className="ml-10">
-            <span className="text-sm text-gray-500">User1</span>
           </div>
         </div>
       </div>
@@ -140,6 +161,13 @@ const Chat = ({ onClose }) => {
           >
             <Smile className="w-6 h-6 text-gray-500" />
           </button>
+
+          {/* TODO: When input is submitted send the message to socketIO */}
+          {/* Append it to the state */}
+          {/* For testing if you are not using socket.io */}
+          {/* Make sure that 80% of the it comes from someone */}
+          {/* But for 20% of the time it is from you */}
+          {/* Wrap the input and submit button functionality inside a form */}
 
           <input
             type="text"
@@ -171,5 +199,17 @@ const Chat = ({ onClose }) => {
     </div>
   );
 };
+
+// {
+//   chatMessages.map((message) => {
+//     return <IndividualMessage message={message} />;
+//   });
+// }
+
+//TODO: This will only include a message
+// A message will have profilePic, messageContent, userName, timeStamp
+function IndividualMessage() {
+  return <></>;
+}
 
 export default Chat;

@@ -27,6 +27,8 @@ import EmailCodeVerify from "./components/ui/EmailCodeVerfiy";
 import SigninPage from "./components/ui/signlogin/SigninPage";
 import LoginPage from "./components/ui/signlogin/LoginPage";
 
+const user = false;
+
 const App = () => {
   return (
     <>
@@ -44,13 +46,13 @@ const App = () => {
         </SidebarMenu> */}
 
         {/* rightBar */}
-        <LeftBar />
+        {/* <LeftBar /> */}
         {/* <MyProfile /> */}
         {/* <Rightbar /> */}
         {/* <Upcoming /> */}
         {/* <Live /> */}
         {/* <Previous /> */}
-        <Videos />
+        {/* <Videos /> */}
         {/* <Webinargg /> */}
         {/* <MicCamera /> */}
         {/* <Chat /> */}

@@ -210,7 +210,7 @@ const MicCamera = () => {
   return (
     <div className="w-full min-h-screen  bg-[#002b5b]">
       <LogoSection />
-      <div className="flex flex-col items-center justify-center min-h-screen gap-2">
+      <div className="flex flex-col items-center justify-center min-h-screen  gap-6">
         {/* URL Bar */}
         <div className="flex items-center h-10 px-4 py-2 bg-black/20 rounded-[40px] gap-1.5 w-[300px] justify-center text-white">
           <Lock className="w-4 h-4 text-center" />
@@ -218,9 +218,9 @@ const MicCamera = () => {
             Webinar.gg/MyWebinar
           </p>
         </div>
-        <div className="w-[600px] bg-white rounded-xl shadow-lg overflow-hidden">
+        <div className="w-screen lg:w-[600px] bg-white rounded-xl shadow-lg overflow-hidden  p-2 lg:p-1">
           {/* Main Content */}
-          <div className="relative bg-gray-800 h-[320px]">
+          <div className="relative bg-gray-800 h-[320px] rounded-lg">
             {!showPermissionModal && (
               <video
                 ref={videoRef}
@@ -310,12 +310,12 @@ const MicCamera = () => {
           {/* Waiting Room Message */}
           {isWaiting && (
             <div className="p-6 text-center">
-              <h3 className="text-xl text-gray-700 mb-4">
+              <h3 className=" lg:text-xl text-gray-700 mb-4">
                 Waiting for the host to let you in...
               </h3>
               <button
                 onClick={handleCancel}
-                className="px-6 py-2 text-red-500 font-medium rounded-lg hover:bg-red-50 transition-colors"
+                className="w-full px-6 py-2  font-medium rounded-lg  border text-red-600 border-red-600 hover:bg-red-700 hover:text-white transition-colors"
               >
                 Cancel
               </button>
@@ -326,10 +326,10 @@ const MicCamera = () => {
           {showPermissionModal && (
             <div className="p-6 text-center">
               <div className="bg-white rounded-lg max-w-md w-full mx-auto">
-                <h2 className="text-xl font-semibold text-gray-800 mb-2">
+                <h2 className="text-base lg:text-xl font-semibold text-gray-800 mb-2">
                   Webinar.gg wants to use your camera and microphone
                 </h2>
-                <p className="text-gray-600 mb-6">
+                <p className="text-gray-600 mb-6 text-sm lg:text-base">
                   In order for others to see and hear you, your browser will
                   request camera and microphone access
                 </p>

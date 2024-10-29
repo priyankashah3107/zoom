@@ -4,6 +4,7 @@ import { Eye, Download } from "lucide-react";
 import H1 from "./H1";
 import { SigninButton } from "./Input";
 import { useState } from "react";
+import Webinars from "./Webinars";
 
 const webinars = [
   {
@@ -69,9 +70,10 @@ const Previous = () => {
     setDeleteForm(!deleteform);
   };
   return (
-    <div className="w-screen h-full">
+    <div className="w-full  mx-auto overflow-x-hidden p-2 lg:p-0">
+      <Webinars />
       {/* Table container with horizontal scroll for very small screens */}
-      <div className="relative overflow-x-auto  sm:rounded-lg">
+      <div className="relative overflow-x-hiddern  sm:rounded-lg">
         <table className="w-full text-left">
           <thead className="text-xs md:text-sm lg:text-base">
             <tr>
@@ -142,7 +144,7 @@ const Previous = () => {
                           ) : (
                             <button
                               onClick={handleDeleteForm}
-                              className="px-2 py-1 md:px-3 md:py-1.5 bg-red-400 hover:bg-red-500 text-white rounded text-xs md:text-sm transition-colors whitespace-nowrap"
+                              className="px-2 py-1 md:px-3 md:py-1.5 bg-[#ff6060] hover:bg-red-[#cc1f1f] text-white rounded text-xs md:text-sm transition-colors whitespace-nowrap"
                             >
                               Delete
                             </button>
@@ -180,7 +182,6 @@ const Previous = () => {
 export default Previous;
 
 const DeleteForm = () => {
-  
   return (
     <>
       <div className="flex flex-col absolute top-24 lg:top-40 left-2 lg:left-60 lg:w-[413px] h-auto p-6 bg-white/60 rounded-xl shadow border-2 border-black/10 backdrop-blur-[100px]justify-start items-start gap-[60px] ">

@@ -1,6 +1,7 @@
 import React from "react";
 import Redvc from "../../assets/redvc.svg";
 import P from "../ui/P";
+import Webinars from "./Webinars";
 const webinars = [
   {
     date: "10-19-2024",
@@ -20,6 +21,7 @@ const live = true;
 const Live = () => {
   return (
     <div className="w-full  mx-auto overflow-x-hidden p-2 lg:p-0">
+      <Webinars />
       <table className="w-full text-left border-collapse">
         <thead>
           <tr className="border-b text-sm lg:text-lg">
