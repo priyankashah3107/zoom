@@ -11,21 +11,7 @@ import { NavLink } from "react-router-dom";
 const Webinars = () => {
   return (
     <>
-      {/* <Router>
-        <H2>Webinars</H2>
-          <div>
-
-          </div>
-        <div>
-          <Routes>
-            <Route path="/upcoming" element={<Upcoming />} />
-            <Route path="/live" element={<Live />} />
-            <Route path="/previous" element={<Previous />} />
-          </Routes>
-        </div>
-      </Router> */}
-
-      <div className="flex flex-col  ml-3 lg:ml-5 p-2">
+      <div className="flex flex-col  ml-3 lg:ml-5 p-2 ">
         <h1 className="text-[#1c1b1f]  lg:text-[28px] font-semibold font-['General Sans'] leading-[39.20px] mt-[20px] lg:mt-[44px]">
           Webinars
         </h1>

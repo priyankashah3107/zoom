@@ -15,6 +15,8 @@ import UserManagement from "./components/ui/UserManagement.jsx";
 import SettingsPage from "./components/ui/SettingsPage.jsx";
 import ProfileGrid from "./components/ui/Videos.jsx";
 
+import PaymentHistory from "./components/ui/PaymentHistory.jsx";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -27,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: "billing",
         element: <Billing />,
+      },
+      {
+        path: "billing/history",
+        element: <PaymentHistory />,
       },
       {
         path: "usermanagement",

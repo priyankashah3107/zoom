@@ -279,6 +279,7 @@ export const WebinarVideoLeftIconsMore = ({ icon }) => {
           className="w-[38px] h-[38px] p-[9px] bg-white/10 hover:bg-white/20 rounded-md flex items-center justify-center transition-colors"
         >
           <img className="w-[19px] h-[19px]" src={icon} alt="profile icon" />
+          {showWebinarDetails && <WebinarDetails />}
         </button>
 
         {isOpen && (
@@ -301,8 +302,6 @@ export const WebinarVideoLeftIconsMore = ({ icon }) => {
           </div>
         )}
       </div>
-
-      {showWebinarDetails && <WebinarDetails />}
     </>
   );
 };
@@ -321,38 +320,38 @@ const WebinarDetails = () => {
   ];
 
   return (
-    <div className="h-[282px] overflow-x-hidden w-auto lg:w-full  p-4 lg:p-10 bg-white/80 rounded-xl shadow border border-black/10 backdrop-blur-[80px] flex-col justify-start items-start gap-4 relative z-50 top-52 right-64 md:right-6 ">
+    <div className="h-[282px] overflow-x-hidden w-[360px] lg:w-[500px]  p-4 lg:p-10 bg-white/80 rounded-xl shadow border border-black/10 backdrop-blur-[80px] flex-col justify-start items-start gap-4 z-50 top-12 lg:top-20 -right-16 lg:right-20 absolute">
       <div className="w-full py-1 rounded-lg  gap-2 items-start ">
         {WebinarDetails.map((val, idx) => (
           <div key={idx} className="flex flex-row text-start items-start ">
             <div className="flex flex-col gap-[10px] items-start">
               <div className="flex flex-row h-[30px] py-1 rounded-lg text-start items-center gap-10  p-4 ">
                 <P>Webinar Id</P>
-                <h2 className="text-[#1c1b1f] text-base font-medium font-['General Sans']">
+                <h2 className="text-[#1c1b1f] text-[12px] lg:text-base font-medium font-['General Sans']">
                   {val.webinarId}
                 </h2>
               </div>
               <div className=" flex flex-row h-[30px] py-1 rounded-lg text-start items-center gap-10  p-4  ">
                 <P>Host</P>
-                <h2 className="text-[#1c1b1f] text-base font-medium font-['General Sans'] text-start">
+                <h2 className="text-[#1c1b1f] text-[12px] lg:text-base font-medium font-['General Sans'] text-start">
                   {val.host}
                 </h2>
               </div>
               <div className="flex flex-row h-[30px] py-1 rounded-lg items-center gap-10 ">
                 <P>Passcode</P>
-                <h2 className="text-[#1c1b1f] text-base font-medium font-['General Sans']">
+                <h2 className="text-[#1c1b1f] text-[12px] lg:text-base font-medium font-['General Sans']">
                   {val.passcode}
                 </h2>
               </div>
               <div className="flex flex-row h-[30px] py-1 rounded-lg  items-center gap-10 ">
                 <P>Invite Link</P>
-                <h2 className="text-[#1c1b1f] text-base font-medium font-['General Sans']">
+                <h2 className="text-[#1c1b1f] text-[12px] lg:text-base font-medium font-['General Sans']">
                   {val.invitelink}
                 </h2>
               </div>
               <div className="flex flex-row h-[30px] py-1 rounded-lg  items-center gap-10">
                 <P>Attendee Id</P>
-                <h2 className="text-[#1c1b1f] text-base font-medium font-['General Sans']">
+                <h2 className="text-[#1c1b1f] text-[12px] lg:text-base font-medium font-['General Sans']">
                   {val.attenddeeId}
                 </h2>
               </div>

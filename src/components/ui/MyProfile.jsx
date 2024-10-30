@@ -1,6 +1,6 @@
 import React from "react";
 import User from "../../assets/user.png";
-import H2 from "./h2";
+import H2 from "./H2";
 import P from "./P";
 import { Edit } from "lucide-react";
 import { Pen } from "lucide-react";
