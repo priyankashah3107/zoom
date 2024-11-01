@@ -16,6 +16,13 @@ import SettingsPage from "./components/ui/SettingsPage.jsx";
 import ProfileGrid from "./components/ui/Videos.jsx";
 
 import PaymentHistory from "./components/ui/PaymentHistory.jsx";
+import BillingManagement from "./components/ui/BillingManagement.jsx";
+import PlanManagement from "./components/ui/PlanManagement.jsx";
+import SigninPage from "./components/ui/signlogin/SigninPage.jsx";
+import LoginPage from "./components/ui/signlogin/LoginPage.jsx";
+import MyProfile from "./components/ui/MyProfile.jsx";
+import LeaveWebinarPage from "./components/ui/LeaveWebinar.jsx";
+import MicCamera from "./components/ui/MicCamera.jsx";
 
 const router = createBrowserRouter([
   {
@@ -27,12 +34,20 @@ const router = createBrowserRouter([
         element: <Rightbar />,
       },
       {
+        path: "plan/management",
+        element: <PlanManagement />,
+      },
+      {
         path: "billing",
         element: <Billing />,
       },
       {
         path: "billing/history",
         element: <PaymentHistory />,
+      },
+      {
+        path: "billing/management",
+        element: <BillingManagement />,
       },
       {
         path: "usermanagement",
@@ -46,6 +61,10 @@ const router = createBrowserRouter([
       {
         path: "videos",
         element: <ProfileGrid />,
+      },
+      {
+        path: "/myprofile",
+        element: <MyProfile />,
       },
     ],
   },
@@ -70,6 +89,26 @@ const router = createBrowserRouter([
         element: <Previous />,
       },
     ],
+  },
+
+  {
+    path: "/signin",
+    element: <SigninPage />,
+  },
+
+  {
+    path: "/login",
+    element: <LoginPage />,
+  },
+
+  {
+    path: "/leave",
+    element: <LeaveWebinarPage />,
+  },
+
+  {
+    path: "/camic",
+    element: <MicCamera />,
   },
 
   // {
