@@ -17,7 +17,7 @@ const Events = ({ time1, time2, event, eventname, icon }) => {
           <div className=" w-[109px] h-auto flex flex-col gap-0.5 ml-[16px]">
             <div className="flex flex-row h-5 justify-start items-center gap-[9px]">
               <P>{event}</P>
-              <img src={icon} alt="icon" />
+              <img src={icon || "img"} alt="icon" />
             </div>
             <H3>{eventname}</H3>
           </div>

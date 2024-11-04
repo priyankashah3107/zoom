@@ -1,6 +1,6 @@
 import React from "react";
 import { format, parse } from "date-fns";
-import { useEffect } from "react";
+
 import Webinars from "./Webinars";
 
 const webinars = [

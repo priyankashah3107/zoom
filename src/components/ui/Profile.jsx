@@ -16,7 +16,7 @@ const Profile = () => {
         <div className="flex flex-col ">
           <div className="flex flex-row gap-2">
             <img src={VerifiedIcon} alt="VerifiedIcon" />
-            <H2 className="font-semibold">{name}</H2>
+            <H2 className="font-semibold">{name}  </H2>
           </div>
           <P>{email}</P>
         </div>

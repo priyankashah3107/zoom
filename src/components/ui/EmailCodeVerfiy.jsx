@@ -32,14 +32,12 @@ const EmailCodeVerify = () => {
     newCode[index] = value;
     setCode(newCode);
 
-    // Move to next input if value is entered
     if (value !== "" && index < 5) {
       inputs.current[index + 1].focus();
     }
   };
 
   const handleKeyDown = (index, e) => {
-    // Move to previous input on backspace if current input is empty
     if (e.key === "Backspace" && index > 0 && code[index] === "") {
       inputs.current[index - 1].focus();
     }
@@ -48,13 +46,11 @@ const EmailCodeVerify = () => {
   const handleVerify = () => {
     const verificationCode = code.join("");
     console.log("Verification code:", verificationCode);
-    // Add your verification logic here
   };
 
   const handleResend = () => {
     console.log("Resending code...");
-    setTimer(120); // Reset timer
-    // Add your resend logic here
+    setTimer(120);
   };
 
   return (
@@ -70,7 +66,6 @@ const EmailCodeVerify = () => {
             prableen@gmail.com
           </p>
 
-          {/* Code Input Section */}
           <div className="flex justify-center gap-2 my-8">
             {code.map((digit, index) => (
               <input
@@ -86,10 +81,8 @@ const EmailCodeVerify = () => {
             ))}
           </div>
 
-          {/* Timer */}
           <div className="text-gray-400 text-sm">{formatTime(timer)}</div>
 
-          {/* Verify Button */}
           <button
             onClick={handleVerify}
             className="w-full bg-[#46ecc3] hover:bg-[#3dd1ac] text-[#002b5b] font-semibold py-3 rounded-lg transition-colors"
@@ -97,7 +90,6 @@ const EmailCodeVerify = () => {
             Verify
           </button>
 
-          {/* Resend Link */}
           <p className="text-gray-400 text-sm">
             Can't find the email? Click{" "}
             <button
